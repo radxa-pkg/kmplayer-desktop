@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+case $1 in
+	install|upgrade)
+        dpkg-divert --package kmplayer-desktop --divert "/usr/share/applications/kmplayer.desktop.bak" --rename "/usr/share/applications/kmplayer.desktop"
+		;;
+esac
+    
+#DEBHELPER#
+
+exit 0

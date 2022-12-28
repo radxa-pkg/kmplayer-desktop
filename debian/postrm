@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+#DEBHELPER#
+
+case $1 in
+	remove)
+        dpkg-divert --package kmplayer-desktop --rename --remove "/usr/share/applications/kmplayer.desktop"
+		;;
+esac
+
+exit 0
